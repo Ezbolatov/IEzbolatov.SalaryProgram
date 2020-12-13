@@ -4,5 +4,6 @@ namespace IEzbolatov.SalaryProgram.Domain
 {
     public class Person
     {
+
     }
 }
