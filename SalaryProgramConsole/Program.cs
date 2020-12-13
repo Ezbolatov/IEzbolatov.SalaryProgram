@@ -1,6 +1,8 @@
-﻿using System;
+﻿using IEzbolatov.SalaryProgram.Domain;
+using IEzbolatov.SalaryProgram.Repository;
+using System;
 
-namespace SalaryProgramConsole
+namespace IEzbolatov.SalaryProgram.SalaryProgramConsole
 {
     class Program
     {
