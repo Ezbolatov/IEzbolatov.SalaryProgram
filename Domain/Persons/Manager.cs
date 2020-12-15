@@ -8,6 +8,7 @@ namespace IEzbolatov.SalaryProgram.Domain
     public class Manager: Staff
     {
         public decimal MonthBonus => 20000;
+        public decimal TotalPay { get; }
         public Manager(string name, List<TimeRecord> timeRecords) : base(name, 200000, timeRecords)
         {
             decimal payPerHour = MonthSalary / Settings.WorkHoursInMonth;
@@ -25,6 +26,8 @@ namespace IEzbolatov.SalaryProgram.Domain
                     totalPay += Settings.WorkHourInDay * payPerHour + bonusPerDay;
                 }
             }
+
+            TotalPay = totalPay;
         }
     }
 }
