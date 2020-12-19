@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace IEzbolatov.SalaryProgram.Repository
 {
-    public class Class1
+    class FileRepository
     {
     }
 }
