@@ -12,24 +12,24 @@ namespace IEzbolatov.SalaryProgram.Repository
         #region Fake Data
         private List<TimeRecord> employees = new List<TimeRecord>()
         {
-            new TimeRecord(DateTime.Now.AddDays(-3), "Иванов",8,"test message 1"),
-            new TimeRecord(DateTime.Now.AddDays(-3), "Васильев",8,"test message 2"),
-            new TimeRecord(DateTime.Now.AddDays(-2), "Иванов",10,"test message 3"),
-            new TimeRecord(DateTime.Now.AddDays(-2), "Васильев",8,"test message 4")
+            new TimeRecord(DateTime.Now.Date.AddDays(-3), "Иванов",8,"test message 1"),
+            new TimeRecord(DateTime.Now.Date.AddDays(-3), "Васильев",8,"test message 2"),
+            new TimeRecord(DateTime.Now.Date.AddDays(-2), "Иванов",10,"test message 3"),
+            new TimeRecord(DateTime.Now.Date.AddDays(-2), "Васильев",8,"test message 4")
         };
 
         private List<TimeRecord> freelancers = new List<TimeRecord>()
         {
-            new TimeRecord(DateTime.Now.AddDays(-3), "Смит",8,"test message 1"),
-            new TimeRecord(DateTime.Now.AddDays(-3), "Бонд",8,"test message 2"),
-            new TimeRecord(DateTime.Now.AddDays(-2), "Смит",10,"test message 3"),
-            new TimeRecord(DateTime.Now.AddDays(-2), "Бонд",8,"test message 4")
+            new TimeRecord(DateTime.Now.Date.AddDays(-3), "Смит",8,"test message 1"),
+            new TimeRecord(DateTime.Now.Date.AddDays(-3), "Бонд",8,"test message 2"),
+            new TimeRecord(DateTime.Now.Date.AddDays(-2), "Смит",10,"test message 3"),
+            new TimeRecord(DateTime.Now.Date.AddDays(-2), "Бонд",8,"test message 4")
         };
 
         private List<TimeRecord> managers = new List<TimeRecord>()
         {
-            new TimeRecord(DateTime.Now.AddDays(-3), "Эзболатов",8,"test message 1"),
-            new TimeRecord(DateTime.Now.AddDays(-2), "Эзболатов",10,"test message 2")
+            new TimeRecord(DateTime.Now.Date.AddDays(-3), "Эзболатов",8,"test message 1"),
+            new TimeRecord(DateTime.Now.Date.AddDays(-2), "Эзболатов",10,"test message 2")
         };
 
         private List<User> users = new List<User>()
@@ -82,7 +82,7 @@ namespace IEzbolatov.SalaryProgram.Repository
             {
                 to = DateTime.Now;
             }
-            return records.Where(x => from.Value >= x.Date && x.Date <= to).ToList();
+            return records.Where(x => from.Value <= x.Date && x.Date <= to).ToList();
         }
 
         public List<TimeRecord> ReportGetByUser(string userName, UserRole userRole, DateTime? from = null, DateTime? to = null)

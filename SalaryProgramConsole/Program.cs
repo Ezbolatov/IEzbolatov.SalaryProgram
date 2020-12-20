@@ -10,7 +10,7 @@ namespace IEzbolatov.SalaryProgram.SalaryProgramConsole
     {
         static void Main(string[] args)
         {
-            
+            //8 минута 42 секунда
         }
     }
 }
